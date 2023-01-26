@@ -1,6 +1,6 @@
 # Programmer name: Joseph Clark 
 # 01/26/22 
-# Lab 3: Decision Making - part 2
+# Lab 3: Decision Making - part 1.5
 
 print("Welcome to the CMSY 156 Soccer Calculator!")
 
