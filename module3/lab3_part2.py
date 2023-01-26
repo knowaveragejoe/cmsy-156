@@ -1,31 +1,33 @@
 # Programmer name: Joseph Clark 
 # 01/26/22 
-# Lab 3: Decision Making - part 1.5
+# Lab 3: Decision Making - part 2
 
-print("Welcome to the CMSY 156 Soccer Calculator!")
-
-# Collect user input and handle 0-cases
-games = float(input("Enter the number of games: "))
-shots = float(input("Enter the number of shots taken: "))
-if (games == 0 or shots == 0):
-    print(f"The average goals per game is: 0.0")
-    print(f"The average shots per game is: 0.0")
-    print(f"The average shots per goal is: 0.0")
+# Collect user input
+num_scoops = int(input("How many scoops would you like? "))
+if (num_scoops <= 0):
+    print("No scoops for you, exiting")
     exit()
-goals = float(input("Enter the number of goals made: "))
 
-# Ensure shots per goal is 0 if no goals were scored
-if (goals == 0):
-    average_shots_per_goal = 0.0
+waffle_cone = input("Would you like a waffle cone? ")
+
+total = 0
+price_per_scoop = 1.50
+# Determine if volume discount applies
+if (num_scoops >= 3):
+    price_per_scoop = 1.25
+
+# Determine if waffle cone charge applies
+if (waffle_cone == "Y" or waffle_cone == "y"):
+    total += 1.10
+
+total += (price_per_scoop * num_scoops)
+
+# Print costs
+print(f"The price per scoop is: {price_per_scoop:,.2f}")
+if (num_scoops == 1):
+    print("You ordered 1 scoop")
 else:
-    average_shots_per_goal = shots / goals
+    print(f"You ordered {num_scoops} scoops")
 
-average_goals = goals / games
-average_shots_per_game = shots / games
-
-# Print output
-print(f"The average goals per game is: {average_goals:>20,.2f}")
-print(f"The average shots per game is: {average_shots_per_game:>20,.2f}")
-print(f"The average shots per goal is: {average_shots_per_goal:>20,.2f}")
-
-print("Thank you for using this program!")  
+print(f"Your total cost is ${total:,.2f}")
+print("Thank you for using the program")
