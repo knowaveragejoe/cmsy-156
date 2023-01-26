@@ -52,20 +52,24 @@ while (not pizza_type_valid):
     """)
     pizza_selection = input("Enter your order here: ")
     
-
     # If the user selects checkout, break out of loop
     if (pizza_selection == "4"):
         break
     else:
-        if (pizzas[pizza_selection]):
+        if (pizza_selection in pizzas):
             pizza_total += pizzas[pizza_selection]["cost"]
         else:
             print("Error: please enter a valid menu option. Try again!")
 
 # Collect tip, if any
-tip = float(input("Please enter the amount of the tip: $"))
-if (tip):
-    total += float(tip)
+tip_is_valid = False
+while (not tip_is_valid):
+    tip = input("Please enter the amount of the tip: $")
+    if (not tip or not tip.isnumeric()):
+        print("Tip entered is invalid. Please try again")
+    else:
+        tip_is_valid = True
+        total += float(tip)
 
 # Calculate tax and add to total
 tax = pizza_total * sales_tax
