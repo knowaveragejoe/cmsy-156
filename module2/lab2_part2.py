@@ -13,8 +13,8 @@ total = sales_tax + shipping_cost + subtotal
 
 print("Receipt:")
 print("The cellphone purchase is: " + make_model)
-print("The purchase price is: ${:,.2f}".format(phone_cost))
-print("The warranty cost is: ${:,.2f}".format(warranty_cost))
-print("The tax is: ${:,.2f}".format(sales_tax))
-print("Shipping cost: ${:,.2f}".format(shipping_cost))
-print("Total amount dude: ${:,.2f}".format(total))
+print(f"The purchase price is: ${phone_cost:,.2f}")
+print(f"The warranty cost is: ${warranty_cost:,.2f}")
+print(f"The tax is: ${sales_tax:,.2f}")
+print(f"Shipping cost: ${shipping_cost:,.2f}")
+print(f"Total amount dude: ${total:,.2f}")

@@ -9,11 +9,11 @@ shots = int(input("Enter the number of shots taken: "))
 goals = int(input("Enter the number of goals made: "))
 
 average_goals = goals / games
-average_shots = shots / games
-average_shots = shots / goals
+average_shots_per_game = shots / games
+average_shots_per_goal = shots / goals
 
 print("The average goals per game is : " + str(average_goals))
-print("The average shots per game is: " + str(average_shots))
-print("The average shots per goal is: " + str(average_shots))
+print("The average shots per game is: " + str(average_shots_per_game))
+print("The average shots per goal is: " + str(average_shots_per_goal))
 
 print("Thank you for using this program!")

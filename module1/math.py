@@ -1,5 +1,5 @@
 # Programmer name: Joseph Clark 
-# My second Python program 
+# 01/26/22
 # Lab 1 Part B: Using the Python math operators 
  
 # Python math operations 
