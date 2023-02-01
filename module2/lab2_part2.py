@@ -4,13 +4,16 @@
 
 # Take user input
 make_model = input("Enter the cellphone make and model: ")
-phone_cost = float(input("Enter the price of the phone in dollars: "))
-warranty_cost = float(input("Enter the price of the warranty in dollars: "))
+phone_cost = float(input("Enter the price of the phone in dollars: $"))
+warranty_cost = float(input("Enter the price of the warranty in dollars: $"))
 
-# Perform our calculations
+# Subtotal is phone + warranty 
 subtotal = phone_cost + warranty_cost
+# Sales tax is 6%
 sales_tax = subtotal * 0.06
+# Shipping costs are 0.017%
 shipping_cost = phone_cost * 0.017
+# Combine them all for net total
 total = sales_tax + shipping_cost + subtotal
 
 # PRint the receipt
