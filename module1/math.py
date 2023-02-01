@@ -1,8 +1,6 @@
 # Programmer name: Joseph Clark 
-# 01/26/22
+# 01/31/22
 # Lab 1 Part B: Using the Python math operators 
- 
-# Python math operations 
  
 print(3*4) 
 print(7**2) 
