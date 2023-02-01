@@ -16,7 +16,7 @@ shipping_cost = phone_cost * 0.017
 # Combine them all for net total
 total = sales_tax + shipping_cost + subtotal
 
-# PRint the receipt
+# Print the receipt
 print("Receipt:")
 print("The cellphone purchase is: " + make_model)
 print(f"The purchase price is: ${phone_cost:,.2f}")

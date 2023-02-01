@@ -1,22 +1,6 @@
 # Programmer name: Joseph Clark 
-# 01/26/22 
+# 01/29/22 
 # Lab 3: Decision Making - part 1
-
-# Dictionary of pizza specifications to make things cleaner later
-pizzas = {
-    "1": { 
-        "toppings": "Plain",
-        "cost": 11.50
-    },
-    "2": {
-        "toppings": "Veggie",
-        "cost": 12.50
-    },
-    "3": {
-        "toppings": "Pepperoni",
-        "cost": 13.50
-    }
-}
 
 print("Welcome to the CMSY-156 Pizza Shop!")
 
@@ -29,9 +13,21 @@ if (delivery_method == "1"):
     delivery_address = input("Enter the delivery address: ")
 tip = float(input("Please enter an amount to tip: $"))
 
+# Determine the cost and name of the pizza selection
+cost = 0
+if (pizza_type == "1"):
+    cost = 11.50
+    pizza_name = "Plain"
+elif (pizza_type == "2"):
+    cost = 12.50
+    pizza_name = "Veggie"
+elif (pizza_type == "3"):
+    cost = 13.50
+    pizza_name = "Pepperoni"
+
 # Calculate tax
-tax = pizzas[pizza_type]["cost"] * 0.06
-total = tax + pizzas[pizza_type]["cost"]
+tax = cost * 0.06
+total = cost + tax
 
 # Add delivery charge if necessary
 if (delivery_method == "1"):
@@ -41,7 +37,8 @@ if (delivery_method == "1"):
 if (tip):
     total += tip
 
-print("You ordered a: " + pizzas[pizza_type]["toppings"] + " pizza")
+# Print output about the order & costs
+print("You ordered a: " + pizza_name + " pizza.")
 
 if (delivery_method == "1"):
     print(f"The total cost with tax, tip and delivery charge is: ${total:,.2f}")

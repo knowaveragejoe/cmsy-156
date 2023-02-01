@@ -1,5 +1,5 @@
 # Programmer name: Joseph Clark 
-# 01/26/22 
+# 01/29/22 
 # Lab 3: Decision Making - part 2
 
 # Collect user input
@@ -20,6 +20,7 @@ if (num_scoops >= 3):
 if (waffle_cone == "Y" or waffle_cone == "y"):
     total += 1.10
 
+# Calculate our total
 total += (price_per_scoop * num_scoops)
 
 # Print costs

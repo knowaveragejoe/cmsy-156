@@ -1,5 +1,5 @@
 # Programmer name: Joseph Clark 
-# 01/26/22 
+# 01/29/22 
 # Lab 3: Decision Making - part 1.5
 
 print("Welcome to the CMSY 156 Soccer Calculator!")
@@ -20,6 +20,7 @@ if (goals == 0):
 else:
     average_shots_per_goal = shots / goals
 
+# Calculate other averages
 average_goals = goals / games
 average_shots_per_game = shots / games
 
