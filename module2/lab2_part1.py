@@ -1,5 +1,5 @@
 # Programmer name: Joseph Clark 
-# 01/26/22 
+# 01/31/22 
 # Lab 2: Input, Output and Processing (Part 1)
 
 print("Welcome to the CMSY 156 Soccer Calculator!")
