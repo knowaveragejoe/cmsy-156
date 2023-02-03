@@ -1,51 +1,11 @@
 # Programmer name: Joseph Clark 
-# 01/26/22 
-# Lab 5: Functions part 1
-
-# Dictionary of pizza specifications to make things cleaner later
-pizzas = {
-    "1": { 
-        "toppings": "Plain",
-        "cost": 11.50
-    },
-    "2": {
-        "toppings": "Veggie",
-        "cost": 12.50
-    },
-    "3": {
-        "toppings": "Pepperoni",
-        "cost": 13.50
-    }
-}
+# 02/02/22 
+# Lab 3: Decision Making - part 1
 
 print("Welcome to the CMSY-156 Pizza Shop!")
 
-def pizza_menu():
-    while (not pizza_type_valid):
-        print("What would you like to order today?")
-        print("""
-            1. Plain Pizza
-            2. Pepperoni Pizza
-            3. Veggie Pizza
-            4. Checkout
-        """)
-        pizza_selection = input("Enter your order here: ")
-        
-        # If the user selects checkout, break out of loop
-        if (pizza_selection == "4"):
-            break
-        else:
-            if (pizza_selection in pizzas):
-                pizza_total += pizzas[pizza_selection]["cost"]
-            else:
-                print("Error: please enter a valid menu option. Try again!")
-
-
-
-
-total = 0.00
-sales_tax = 0.06
-delivery_fee = 5.00
+# Order total
+total = 0.0
 
 # Collect delivery method
 delivery_method_valid = False
@@ -56,17 +16,13 @@ while (not delivery_method_valid):
     else:
         print("Error: Please enter 1 or 2. Try again!")
 
-# Collect delivery address and apply delivery fee if necessary
+# Collect address if delivery selected & add delivery charge
 delivery_address = ""
 if (delivery_method == "1"):
-    total += delivery_fee
+    total += 5.00
     delivery_address = input("Enter the delivery address: ")
 
-# Collect pizza selection and accumulate costs
-pizza_total = 0.00
-pizza_type_valid = False
-
-# Collect tip, if any
+# Collect tip and add to total if valid
 tip_is_valid = False
 while (not tip_is_valid):
     tip = input("Please enter the amount of the tip: $")
@@ -76,10 +32,43 @@ while (not tip_is_valid):
         tip_is_valid = True
         total += float(tip)
 
-# Calculate tax and add to total
-tax = pizza_total * sales_tax
-total += pizza_total + tax
+# Begin collecting order info
+print("What would you like to order today?")
 
+# Accumulate pizza orders, if the user selects checkout break out of the loop
+pizza_total = 0.00
+pizza_type_valid = False
+while (not pizza_type_valid):
+    print("What would you like to order today?")
+    print("""
+        1. Plain Pizza
+        2. Pepperoni Pizza
+        3. Veggie Pizza
+        4. Checkout
+    """)
+    pizza_selection = input("Enter your order here: ")
+    
+    # Accumulate pizza orders, ff the user selects checkout we break out of loop
+    if (pizza_selection == "4"):
+        break
+    else:
+        if (pizza_selection == "1"):
+            pizza_cost = 11.50
+        elif (pizza_selection == "2"):
+            pizza_cost = 12.50
+        elif (pizza_selection == "3"):
+            pizza_cost = 13.50
+        else:
+            print("Error: please enter a valid menu option. Try again!")
+            continue
+        
+        pizza_total += pizza_cost
+
+# Calculate tax & final total
+tax = pizza_total * 0.06
+total = total + pizza_total + tax
+
+# Display output & end interaction with user
 if (delivery_method == "1"):
     print(f"The total cost with tax, tip and delivery charge is: ${total:,.2f}")
     print("Delivery address: " + delivery_address)
