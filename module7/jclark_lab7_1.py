@@ -3,8 +3,8 @@
 # 02/27/22 
 # Lab 6: Lists part 1
 
+# Print averages from a given list
 def display(averages):
-  # Print calculation results
   print(f"The average goals per game is: {averages[0]:>20,.2f}")
   print(f"The average shots per game is: {averages[1]:>20,.2f}")
   print(f"The average shots per goal is: {averages[2]:>20,.2f}")
@@ -20,15 +20,20 @@ def prompt_and_validate_input(input_type):
 
 print("Welcome to the CMSY 156 Soccer Calculator!")
 
+# Initialize some variables for later
 names = []
-
 averages = [0, 0, 0]
 
-# Open file
-file = open("soccer.txt", "r")
-# Read lines
-for line in file:
-    names.append(line[:-1])
+# Try to open soccer.txt and exit if it fails
+try:
+  # Open file
+  file = open("soccer.txt", "r")
+  # Read lines
+  for line in file:
+      names.append(line[:-1])
+except:
+  print("Error opening soccer.txt")
+  exit()
 
 # Close file
 file.close()
