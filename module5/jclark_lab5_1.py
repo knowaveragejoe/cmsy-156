@@ -1,7 +1,7 @@
 # CMSY-156
 # Programmer name: Joseph Clark 
 # 02/02/22 
-# Lab 3: Decision Making - part 1
+# Lab 5: Functions - part 1
 
 # Constants
 SALES_TAX = 0.06
