@@ -1,6 +1,6 @@
 # CMSY-156
 # Programmer name: Joseph Clark 
-# 02/2/22 
+# 02/27/22 
 # Lab 6: Files part 1
 
 # Given an input type, prompts the user and validates their input
