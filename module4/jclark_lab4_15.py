@@ -1,6 +1,6 @@
 # CMSY-156
 # Programmer name: Joseph Clark 
-# 01/26/22 
+# 02/26/22 
 # Lab 4: Repetition part 1.5
 
 print("Welcome to the CMSY 156 Soccer Calculator!")
