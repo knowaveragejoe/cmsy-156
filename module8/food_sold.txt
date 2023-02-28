@@ -1,0 +1,8 @@
+Plain Pizza     184.00
+Hamburger       292.75
+Veggie Pizza    175.00
+Cheeseburger    147.75
+Pepperoni Pizza 283.50
+French Fries    097.50
+Soda            122.25
+Supreme Pizza   167.95
