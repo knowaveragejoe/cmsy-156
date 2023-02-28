@@ -1,7 +1,7 @@
 # CMSY-156
 # Programmer name: Joseph Clark 
 # 02/27/22 
-# Lab 6: Lists part 1
+# Lab 7: Lists part 1
 
 # Print averages from a given list
 def display(averages):
