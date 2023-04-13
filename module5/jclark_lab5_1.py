@@ -74,8 +74,7 @@ print("What would you like to order today?")
 
 # Accumulate pizza orders, if the user selects checkout break out of the loop
 pizza_total = 0.00
-pizza_type_valid = False
-while (not pizza_type_valid):
+while (True):
     print("What would you like to order today?")
     display_pizza_menu()
     pizza_selection = input("Enter your order here: ")

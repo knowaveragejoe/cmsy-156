@@ -1,7 +1,7 @@
 # CMSY-156
 # Programmer name: Joseph Clark 
-# 02/02/22 
-# Lab 3: Decision Making - part 1
+# 03/05/22 
+# Lab 4: Repetion (Part 1)
 
 print("Welcome to the CMSY-156 Pizza Shop!")
 
@@ -38,8 +38,7 @@ print("What would you like to order today?")
 
 # Accumulate pizza orders, if the user selects checkout break out of the loop
 pizza_total = 0.00
-pizza_type_valid = False
-while (not pizza_type_valid):
+while (True):
     print("What would you like to order today?")
     print("""
         1. Plain Pizza
@@ -47,17 +46,17 @@ while (not pizza_type_valid):
         3. Veggie Pizza
         4. Checkout
     """)
-    pizza_selection = input("Enter your order here: ")
+    pizza_selection = int(input("Enter your order here: "))
     
     # Accumulate pizza orders, ff the user selects checkout we break out of loop
-    if (pizza_selection == "4"):
+    if (pizza_selection == 4):
         break
     else:
-        if (pizza_selection == "1"):
+        if (pizza_selection == 1):
             pizza_cost = 11.50
-        elif (pizza_selection == "2"):
+        elif (pizza_selection == 2):
             pizza_cost = 12.50
-        elif (pizza_selection == "3"):
+        elif (pizza_selection == 3):
             pizza_cost = 13.50
         else:
             print("Error: please enter a valid menu option. Try again!")

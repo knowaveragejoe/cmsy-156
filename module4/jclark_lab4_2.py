@@ -4,18 +4,19 @@
 # Lab 4: Repetition part 2
 
 # Constants
-absolute_zero = -273.15
+ABSOLUTE_ZERO = -273.15
 
 # Ask for a starting temp and either print an error and convert to float
 starting_temp = input("Enter a starting temperature: ")
-while not starting_temp or float(starting_temp) < absolute_zero:
-    print(f"Starting temperature invalid, must be greater than absolute zero({absolute_zero})")
+while not starting_temp or float(starting_temp) < ABSOLUTE_ZERO:
+    print(f"Starting temperature invalid, must be greater than absolute zero({ABSOLUTE_ZERO})")
     starting_temp = input("Enter a starting temperature: ")
 starting_temp = float(starting_temp)
 
 # initialize our "counter" temperature variable
 current_temp = starting_temp
 
+# While loop output
 print("Temperature conversions using a while loop:")
 print("Cels Fahr Kelvin")
 while current_temp <= (starting_temp + 19):
@@ -27,6 +28,7 @@ while current_temp <= (starting_temp + 19):
 # Reset our counter temperature
 current_temp = starting_temp
 
+# For loop output
 print("Temperature conversions using a for loop:")
 print("Cels Fahr Kelvin")
 for i in range(int(starting_temp), int(starting_temp) + 20):
