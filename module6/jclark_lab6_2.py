@@ -14,7 +14,7 @@ while True:
 
 # Take user input for filename two and attempt to read it
 while True:
-    filename_two = input("Enter the path and name of the first file: ")
+    filename_two = input("Enter the path and name of the second file: ")
     try:
         file_two = open(filename_two, "r")
         break
@@ -23,7 +23,7 @@ while True:
 
 # Take user input for the output filename and try to open it for writing
 while True:
-    output_filename = input("Enter the path and name of the first file: ")
+    output_filename = input("Enter the path and name of the output file: ")
     try:
         output_filename = open(output_filename, "w")
         break
